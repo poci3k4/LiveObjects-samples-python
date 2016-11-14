@@ -1,0 +1,48 @@
+LoRa MQTT Client Sample
+=======================
+
+__LoRa MQTT Client Sample__ is a code sample for the MQTT protocol, written in Python.
+
+## Quick start
+
+### Download
+
+clone from GitHub:
+
+```
+$ git clone https://github.com/Orange-OpenSource/LiveObjects-samples-python.git
+```
+
+### Prerequisites
+
+Version of Python : tested with 2.7.10 and 3.5.2
+
+This sample of code use the paho library. You should download the library with the `pip` tool
+
+> pip install paho-mqtt
+
+In order to retrieve data, a valide LoRa device must be provisionned on your account.
+You should have a valid API-KEY with LORA_USER role. 
+
+### First use
+
+1. Open the LoMqttConf.py and replace the API-KEY with yours
+2. Open the LoRaMqqtSample.py. In the `on_connect()` function, comment, uncomment or modify subscriptions (all devices PubSub, specific device PubSub or FIFO)
+3. Run the LoRaMqttSample.py
+
+### Structure
+
+This sample contains 3 files : 
+* LoRaMqttSample.py : The main file, using the LoMqttClient class in order to retrieve LoRa data.
+* LoMqttConf.py : The configuration file, filled with your API-KEY
+* LoMqttClient.py : A class wrapping the Paho MQTT client, adding the Live Objects specificies. 
+
+## License
+
+Copyright (c) 2015 — 2016 Orange
+
+This code is released under the BSD3 license. See the `LICENSE` file for more information.
+
+## Contact
+
+* Homepage: [lpwa.liveobjects.orange-business.com](https://lpwa.liveobjects.orange-business.com/)
