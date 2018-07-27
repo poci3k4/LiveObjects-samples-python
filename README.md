@@ -15,14 +15,14 @@ $ git clone https://github.com/Orange-OpenSource/LiveObjects-samples-python.git
 
 ### Prerequisites
 
-Version of Python : tested with 2.7.10 and 3.5.2
+Version of Python: tested with 2.7.10 and 3.5.2
 
 This sample of code use the paho library. You should download the library with the `pip` tool
 
 > pip install paho-mqtt
 
-In order to retrieve data, a valide LoRa device must be provisionned on your account.
-You should have a valid API-KEY with LORA_USER role. 
+In order to retrieve data, a valide LoRa device must be provisioned on your account.
+You should have a valid API-KEY with BUS_R role.
 
 ### First use
 
@@ -33,9 +33,9 @@ You should have a valid API-KEY with LORA_USER role.
 ### Structure
 
 This sample contains 3 files : 
-* LoRaMqttSample.py : The main file, using the LoMqttClient class in order to retrieve LoRa data.
-* LoMqttConf.py : The configuration file, filled with your API-KEY
-* LoMqttClient.py : A class wrapping the Paho MQTT client, adding the Live Objects specificies. 
+* LoRaMqttSample.py: The main file, using the LoMqttClient class in order to retrieve LoRa data.
+* LoMqttConf.py: The configuration file, filled with your API-KEY
+* LoMqttClient.py: A class wrapping the Paho MQTT client, adding the Live Objects specifics. 
 
 ## License
 
@@ -45,4 +45,4 @@ This code is released under the BSD3 license. See the `LICENSE` file for more in
 
 ## Contact
 
-* Homepage: [lpwa.liveobjects.orange-business.com](https://lpwa.liveobjects.orange-business.com/)
+* Homepage: [liveobjects.orange-business.com](https://liveobjects.orange-business.com/)

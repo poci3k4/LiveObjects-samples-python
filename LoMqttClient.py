@@ -18,7 +18,7 @@ class LoMqttClient(mqtt.Client):
         self._subTopics = {}
         
     def connect(self):
-        print ("MQTT connect"+str(self.server)+str(self.port)+str(self.apiKey))
+        print("MQTT connect "+str(self.server)+" "+str(self.port)+" "+str(self.apiKey))
         return mqtt.Client.connect(self, self.server, self.port, 10)    
 
     def unsubscribe(self, topic):

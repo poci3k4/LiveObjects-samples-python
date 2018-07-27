@@ -9,16 +9,20 @@ from LoMqttConf import *
 import LoMqttClient
 import json
 
+# On Windows, uncomment the 2 following lines to force prints (only works with Python3), or launch the script with "python -u LoRaMqttSample.py"
+# import functools
+# print = functools.partial(print, flush=True)
+
 # The callback for when the client receives a CONNACK response from the server.
-def on_connect(client, userdata, rc):
+def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("MQTT Connected")
         
         # Subscription for all devices (pub sub)
-        # print client.subscribe("router/~event/v1/data/new/urn/lora/#")
+        # print(client.subscribe("router/~event/v1/data/new/typ/+/dev/+/con/lora/evt/+/grp/#"))
         
         # Subscription for one specific device (pub sub)
-        # print client.subscribe("router/~event/v1/data/new/urn/lora/0123456789ABCDEF/#")
+        # print(client.subscribe("router/~event/v1/data/new/typ/+/dev/urn:lo:nsid:lora:0123456789ABCDEF/con/lora/evt/+/grp/#"))
 
         # Subscription for a fifo
         print(client.subscribe("fifo/myfifo"))
