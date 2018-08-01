@@ -17,11 +17,17 @@ import json
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("MQTT Connected")
+		
+		# Subscription for all devices (pub sub) (deprecated and will be decommissioned in december 2018)
+        # print client.subscribe("router/~event/v1/data/new/urn/lora/#")
         
-        # Subscription for all devices (pub sub)
+        # Subscription for one specific device (pub sub) (deprecated and will be decommissioned in december 2018)
+        # print client.subscribe("router/~event/v1/data/new/urn/lora/0123456789ABCDEF/#")
+
+        # Subscription for all devices (pub sub) (new)
         # print(client.subscribe("router/~event/v1/data/new/typ/+/dev/+/con/lora/evt/+/grp/#"))
         
-        # Subscription for one specific device (pub sub)
+        # Subscription for one specific device (pub sub) (new)
         # print(client.subscribe("router/~event/v1/data/new/typ/+/dev/urn:lo:nsid:lora:0123456789ABCDEF/con/lora/evt/+/grp/#"))
 
         # Subscription for a fifo
