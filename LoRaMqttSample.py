@@ -18,7 +18,7 @@ def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("MQTT Connected")
 		
-		# Subscription for all devices (pub sub) (deprecated and will be decommissioned in december 2018)
+        # Subscription for all devices (pub sub) (deprecated and will be decommissioned in december 2018)
         # print client.subscribe("router/~event/v1/data/new/urn/lora/#")
         
         # Subscription for one specific device (pub sub) (deprecated and will be decommissioned in december 2018)
